@@ -8,7 +8,7 @@ import { FaShareSquare } from "react-icons/fa";
 export default function Home() {
   return (
     <main>
-      <Container className="min-h-screen flex justify-center items-center w-full">
+      <Container className="min-h-screen flex justify-center items-center w-full px-24">
         <div className="flex flex-col gap-8 justify-center items-center">
           <h1 className="font-bold text-4xl">
             Jungsu L.
