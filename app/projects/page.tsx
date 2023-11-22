@@ -4,7 +4,6 @@ import React, { useCallback, useState } from "react";
 import { motion } from "framer-motion";
 import Container from "../Container";
 import ProjectGrid from "./ProjectGrid";
-import Arrow from "../components/Arrow";
 
 const data = {
   title: "Projects",
@@ -86,7 +85,6 @@ const Projects = () => {
   return (
     <>
       <Container className="min-h-screen flex justify-center items-center w-full px-32 gap-48">
-        <Arrow direction="left" href="/about" />
         <motion.div
           className="flex flex-col justify-start gap-6"
           initial={{ y: 200, opacity: 0 }}
@@ -132,7 +130,6 @@ const Projects = () => {
               ))
             )}
         </motion.div>
-        <Arrow direction="right" href="/contact" />
       </Container>
     </>
   );

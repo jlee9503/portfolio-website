@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Container from "../Container";
 import { motion } from "framer-motion";
-import Arrow from "../components/Arrow";
+import Experience from "./Experience";
+import Education from "./Education";
 
 const data = {
   title_intro: "About",
@@ -17,10 +18,9 @@ const data = {
 const About = () => {
   return (
     <>
-      <Container className="min-h-screen flex justify-center items-center w-full px-32">
-        <Arrow direction="left" href="/" />
+      <Container className="min-h-screen flex justify-center items-center w-full px-32 gap-12">
         <motion.div
-          className="basis-1/2 px-8"
+          className="basis-2/3"
           initial={{ x: -200, opacity: 0 }}
           transition={{ duration: 1 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -30,7 +30,7 @@ const About = () => {
           <p>{data.introduction}</p>
         </motion.div>
         <motion.div
-          className="basis-1/2 flex justify-center items-center"
+          className="basis-1/3 flex justify-center items-center w-full relative pt-[30%]"
           initial={{ x: 200, opacity: 0 }}
           transition={{ duration: 1 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -39,14 +39,15 @@ const About = () => {
           <Image
             src={data.profilePic}
             alt="profile-picture"
-            width={400}
-            height={350}
-            className="rounded-lg object-cover"
+            objectFit="cover"
+            fill
+            className="object-cover rounded-2xl"
           />
         </motion.div>
-        <Arrow direction="right" href="/projects" />
       </Container>
-      <div>skill page</div>
+
+      <Education />
+      <Experience />
     </>
   );
 };
