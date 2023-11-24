@@ -38,7 +38,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <motion.a
-              href="/"
+              href="https://github.com/jlee9503"
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -47,7 +47,7 @@ export default function Home() {
               <GithubIcon />
             </motion.a>
             <motion.a
-              href="/"
+              href="https://www.linkedin.com/in/jungsu-lee-950331/"
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}

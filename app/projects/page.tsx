@@ -4,49 +4,67 @@ import React, { useCallback, useState } from "react";
 import { motion } from "framer-motion";
 import Container from "../Container";
 import ProjectGrid from "./ProjectGrid";
+import Arrow from "../components/Arrow";
 
 const data = {
   title: "Projects",
   projects: [
     {
-      id: "reactjs",
-      section: "React JS",
+      id: "web",
+      section: "Web Application",
       items: [
         {
           itemId: 1,
-          url: "/",
-          name: "react project 1",
-          description: "This is a project 1",
+          url: "airbnbClone.png",
+          name: "Airbnb Clone",
+          description:
+            "Airbnb website using Next.js. Create an account and make reservations on selected dates. Filter saved properties by category.",
+          skillUsed: [
+            "next-js.svg",
+            "typescript.svg",
+            "tailwindcss.svg",
+            "prisma.svg",
+          ],
+          webLink: "https://rent-your-home-five.vercel.app/",
         },
         {
           itemId: 2,
-          url: "/",
+          url: "airbnbClone.png",
           name: "react project 2",
           description: "This is a project 2",
+          skillUsed: [],
         },
         {
           itemId: 3,
-          url: "/",
-          name: "react project 3",
-          description: "This is a project 3",
+          url: "threejs.png",
+          name: "Three.js Website",
+          description: "Business landing page using Three.js and react map library.",
+          skillUsed: [],
+          webLink: "https://react-threejs-web.vercel.app/",
         },
       ],
     },
     {
-      id: "python",
-      section: "Python",
+      id: "desktop",
+      section: "Desktop Application",
       items: [
         {
           itemId: 1,
-          url: "/",
-          name: "python project 1",
-          description: "This is a project 1",
+          url: "gmailOrganizer_delete.png",
+          name: "Gmail Organizer",
+          description:
+            "Quickly send or schedule email. Delete old emails using date filter feature. Created using Tkinter library.",
+          skillUsed: ["python.svg"],
+          webLink: "https://github.com/jlee9503/gmail-organizer",
         },
         {
           itemId: 2,
-          url: "/",
-          name: "python project 2",
-          description: "This is a project 2",
+          url: "youtube_downloader.png",
+          name: "Youtube Downloader",
+          description:
+            "Created using Tkinter library. Download your favorite youtube video and store it in your local storage.",
+          skillUsed: ["python.svg"],
+          webLink: "https://github.com/jlee9503/youtube-downloader",
         },
       ],
     },
@@ -56,15 +74,19 @@ const data = {
       items: [
         {
           itemId: 1,
-          url: "/",
-          name: "old project 1",
-          description: "This is a project 1",
+          url: "oldPortfolio.png",
+          name: "Portfolio website",
+          skillUsed: ["react.svg", "Html.svg", "css.svg"],
+          webLink: "https://jlee9503.github.io/personal-portfolio/",
+          description: "Previous portfolio website created using React.js.",
         },
         {
           itemId: 2,
-          url: "/",
-          name: "old project 2",
-          description: "This is a project 2",
+          url: "airbnbClone.png",
+          name: "Grocery List",
+          skillUsed: ["Html.svg", "css.svg", "javascript.svg"],
+          webLink: "https://jlee9503.github.io/simple-grocery-list-using-JS/",
+          description: "Simple grocery to-do list using vanlia JS.",
         },
       ],
     },
@@ -72,7 +94,7 @@ const data = {
 };
 
 const Projects = () => {
-  const [selected, setSelected] = useState("reactjs");
+  const [selected, setSelected] = useState("web");
 
   const handleClick = useCallback((section: React.MouseEvent<HTMLElement>) => {
     data.projects.map((project) => {
@@ -83,10 +105,11 @@ const Projects = () => {
   }, []);
 
   return (
-    <>
-      <Container className="min-h-screen flex justify-center items-center w-full px-32 gap-48">
+    <main>
+      <Container className="min-h-screen flex justify-center items-center w-full px-60">
+        <Arrow href="/experience" direction="left" />
         <motion.div
-          className="flex flex-col justify-start gap-6"
+          className="flex flex-col justify-start gap-6 basis-1/3"
           initial={{ y: 200, opacity: 0 }}
           transition={{ duration: 1 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -111,7 +134,7 @@ const Projects = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-2 gap-4"
+          className="grid grid-cols-2 gap-8 basis-2/3"
           initial={{ y: -200, opacity: 0 }}
           transition={{ duration: 1 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -123,15 +146,17 @@ const Projects = () => {
               project.items.map((item) => (
                 <ProjectGrid
                   key={item.itemId}
-                  url={item.url}
+                  imgUrl={item.url}
                   name={item.name}
                   description={item.description}
+                  webLink={item.webLink}
+                  skillUsed={item.skillUsed}
                 />
               ))
             )}
         </motion.div>
       </Container>
-    </>
+    </main>
   );
 };
 

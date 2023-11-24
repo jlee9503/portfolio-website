@@ -27,8 +27,8 @@ const Navbar = () => {
         <nav className="flex">
           <CustomLink href="/" title="Home" />
           <CustomLink href="/about" title="About" />
+          <CustomLink href="/experience" title="Experience" />
           <CustomLink href="/projects" title="Projects" />
-          <CustomLink href="/contact" title="Contact" />
         </nav>
 
         <button

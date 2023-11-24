@@ -3,8 +3,7 @@
 import Image from "next/image";
 import Container from "../Container";
 import { motion } from "framer-motion";
-import Experience from "./Experience";
-import Education from "./Education";
+import Arrow from "../components/Arrow";
 
 const data = {
   title_intro: "About",
@@ -17,8 +16,9 @@ const data = {
 
 const About = () => {
   return (
-    <>
+    <main>
       <Container className="min-h-screen flex justify-center items-center w-full px-32 gap-12">
+        <Arrow href="/" direction="left" />
         <motion.div
           className="basis-2/3"
           initial={{ x: -200, opacity: 0 }}
@@ -44,11 +44,9 @@ const About = () => {
             className="object-cover rounded-2xl"
           />
         </motion.div>
+        <Arrow href="/experience" direction="right" />
       </Container>
-
-      <Education />
-      <Experience />
-    </>
+    </main>
   );
 };
 
