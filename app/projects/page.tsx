@@ -16,9 +16,9 @@ const data = {
         {
           itemId: 1,
           url: "airbnbClone.png",
-          name: "Airbnb Clone",
+          name: "Rent app",
           description:
-            "Airbnb website using Next.js. Create an account and make reservations on selected dates. Filter saved properties by category.",
+            "Rent property web app that allows to sign-in with an account and reserve your favorite property. Also able to search and add your property.",
           skillUsed: [
             "next-js.svg",
             "typescript.svg",
@@ -37,9 +37,10 @@ const data = {
         {
           itemId: 3,
           url: "threejs.png",
-          name: "Three.js Website",
-          description: "Business landing page using Three.js and react map library.",
-          skillUsed: [],
+          name: "3D Landing page",
+          description:
+            "Business landing page using Three.js and react map library.",
+          skillUsed: ["react.svg", "javascript.svg", "css.svg"],
           webLink: "https://react-threejs-web.vercel.app/",
         },
       ],
@@ -70,7 +71,7 @@ const data = {
     },
     {
       id: "oldprojects",
-      section: "Old projects",
+      section: "Old Projects",
       items: [
         {
           itemId: 1,
@@ -82,7 +83,7 @@ const data = {
         },
         {
           itemId: 2,
-          url: "airbnbClone.png",
+          url: "grocery_app.png",
           name: "Grocery List",
           skillUsed: ["Html.svg", "css.svg", "javascript.svg"],
           webLink: "https://jlee9503.github.io/simple-grocery-list-using-JS/",
@@ -106,23 +107,23 @@ const Projects = () => {
 
   return (
     <main>
-      <Container className="min-h-screen flex justify-center items-center w-full px-60">
+      <Container className="min-h-[calc(100vh-10rem)] flex flex-col 2xl:flex-row justify-start md:justify-center items-center w-full md:px-28 xl:px-60 gap-5 2xl:gap-0">
         <Arrow href="/experience" direction="left" />
         <motion.div
-          className="flex flex-col justify-start gap-6 basis-1/3"
+          className="flex flex-col justify-start gap-6 basis-1/3 w-full 2xl:w-fit"
           initial={{ y: 200, opacity: 0 }}
           transition={{ duration: 1 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
         >
-          <h1 className="text-3xl font-semibold">{data.title}</h1>
-          <div>
+          <h1 className="text-3xl font-semibold text-indigo-500 dark:text-orange-400">{data.title}</h1>
+          <div className="flex 2xl:block">
             {data.projects.map((project) => (
               <div
                 key={project.id}
-                className={`w-fit cursor-pointer m-2 pt-2 border-b-2 transition-[border] ease-linear duration-300 hover:border-b-neutral-800 ${
+                className={`w-fit cursor-pointer m-2 pt-2 border-b-2 transition-[border] ease-linear duration-300 hover:border-b-indigo-400 hover:dark:border-b-orange-400 ${
                   selected === project.id
-                    ? "border-b-neutral-800"
+                    ? "border-b-indigo-400 dark:border-b-orange-400"
                     : "border-transparent"
                 }`}
                 onClick={handleClick}
@@ -134,7 +135,7 @@ const Projects = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-2 gap-8 basis-2/3"
+          className="grid grid-cols-1 lg:grid-cols-2 lg:gap-8 basis-2/3 w-full"
           initial={{ y: -200, opacity: 0 }}
           transition={{ duration: 1 }}
           whileInView={{ y: 0, opacity: 1 }}

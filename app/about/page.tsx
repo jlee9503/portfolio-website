@@ -17,7 +17,7 @@ const data = {
 const About = () => {
   return (
     <main>
-      <Container className="min-h-screen flex justify-center items-center w-full px-32 gap-12">
+      <Container className="min-h-[calc(100vh-10rem)] flex justify-center items-center w-full md:px-32 gap-12">
         <Arrow href="/" direction="left" />
         <motion.div
           className="basis-2/3"
@@ -26,7 +26,7 @@ const About = () => {
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
         >
-          <h1 className="font-semibold text-3xl mb-4">{data.title_intro}</h1>
+          <h1 className="font-semibold text-3xl mb-4 text-indigo-500 dark:text-orange-400">{data.title_intro}</h1>
           <p>{data.introduction}</p>
         </motion.div>
         <motion.div
@@ -41,6 +41,7 @@ const About = () => {
             alt="profile-picture"
             objectFit="cover"
             fill
+            sizes="100%"
             className="object-cover rounded-2xl"
           />
         </motion.div>

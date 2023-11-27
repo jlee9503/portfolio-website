@@ -29,7 +29,7 @@ const EducationDetails = ({
         transition={{ duration: 1.5, type: "spring" }}
       >
         <h3 className="capitalize font-medium text-2xl">{degree}</h3>
-        <span className="capitalize font-medium text-dark/75">
+        <span className="capitalize font-medium text-dark/75 dark:text-light/75">
           {timeframe} | {school}
         </span>
       </motion.div>
@@ -44,7 +44,7 @@ const Education = () => {
       <h1 className="font-semibold text-3xl mb-10 w-full">Education</h1>
       <div className="w-full relative">
         <motion.div
-          className="absolute left-0 top-0 w-[4px] h-full bg-indigo-400 origin-top"
+          className="absolute left-0 top-0 w-[4px] h-full bg-indigo-400 dark:bg-orange-400 origin-top"
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4">
           <EducationDetails

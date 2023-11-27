@@ -12,7 +12,7 @@ interface ArrowProps {
 const Arrow = ({ direction, href }: ArrowProps) => {
   return (
     <motion.div
-      className={`fixed w-fit ${direction === "left" ? "left-4" : "right-4"}`}
+      className={`fixed w-fit hidden 2xl:block ${direction === "left" ? "left-4" : "right-4"}`}
       initial={{ opacity: 0 }}
       transition={{ duration: 2, delay: 1 }}
       whileInView={{ opacity: 1 }}

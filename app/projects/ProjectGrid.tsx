@@ -15,12 +15,12 @@ interface ProjectGridProps {
 const ProjectGrid = ({ imgUrl, name, description, webLink, skillUsed }: ProjectGridProps) => {
   return (
     <motion.div
-      className="w-full rounded-2xl"
+      className="w-full rounded-2xl mb-8 lg:mb-0"
       initial={{ opacity: 0 }}
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1 }}
     >
-      <div className="w-h2 h-64 relative">
+      <div className="h-64 relative">
         <Link
           href={webLink == undefined ? "javascript:void(0);" : webLink}
           target={webLink == undefined ? "_self" : "_blank"}
@@ -30,13 +30,13 @@ const ProjectGrid = ({ imgUrl, name, description, webLink, skillUsed }: ProjectG
             alt={name}
             objectFit="Cover"
             fill
-            className="object-cover rounded-2xl w-full h-auto"
+            className="object-cover rounded-xl w-full h-auto border border-black shadow-md shadow-indigo-400 dark:shadow-orange-400 hover:scale-105"
           />
         </Link>
       </div>
       <div className="flex justify-between items-center">
         <div className="font-semibold text-xl my-1">{name}</div>
-        <div className="flex justify-center items-center gap-1">
+        <div className="flex justify-center items-center gap-1 dark:bg-slate-200 dark:rounded-[4px] dark:p-[2px]">
           {skillUsed.map((skill, idx) => (
             <Tooltip key={idx} content={skill.substring(0, skill.length - 4)}>
               <Image

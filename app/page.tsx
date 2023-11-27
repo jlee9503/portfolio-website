@@ -9,20 +9,20 @@ import Arrow from "./components/Arrow";
 export default function Home() {
   return (
     <main>
-      <Container className="min-h-screen flex justify-center items-center w-full px-24">
+      <Container className="min-h-[calc(100vh-10rem)] flex justify-center items-center w-full md:px-24">
         <div className="flex flex-col gap-8 justify-center items-center">
           <motion.h1
-            className="font-bold text-4xl"
+            className="font-bold text-2xl text-center md:text-left md:text-4xl"
             initial={{ y: 200, opacity: 0 }}
             transition={{ duration: 1 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
           >
             Jungsu L.
-            <span className="text-indigo-400 ml-4">Software Developer</span>
+            <span className="text-indigo-400 dark:text-orange-400 ml-4">Software Developer</span>
           </motion.h1>
           <motion.button
-            className="border-[1px] bg-indigo-400 w-fit px-4 py-2 rounded-lg flex justify-between items-center"
+            className="border-[1px] bg-indigo-400 w-fit px-4 py-2 rounded-lg flex justify-between items-center dark:bg-orange-400"
             initial={{ y: 200, opacity: 0 }}
             transition={{ duration: 1 }}
             whileInView={{ y: 0, opacity: 1 }}
