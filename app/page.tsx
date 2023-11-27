@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { GithubIcon, LinkedInIcon } from "./components/Navbar/SocialIcon";
 import { FaShareSquare } from "react-icons/fa";
 import Arrow from "./components/Arrow";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -28,7 +29,9 @@ export default function Home() {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
           >
-            Resume <FaShareSquare className="ml-1" />
+            <Link href="/jungsu_lee_resume.pdf" className="flex justify-between items-center" target="_blank">
+              Resume <FaShareSquare className="ml-1" />
+            </Link>
           </motion.button>
           <motion.div
             className="flex justify-center items-center gap-5"
