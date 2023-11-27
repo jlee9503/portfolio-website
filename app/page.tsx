@@ -9,7 +9,7 @@ import Arrow from "./components/Arrow";
 export default function Home() {
   return (
     <main>
-      <Container className="min-h-[calc(100vh-10rem)] flex justify-center items-center w-full md:px-24">
+      <Container className="min-h-[calc(100vh-10rem)] flex justify-center items-center w-full px-10 md:px-24">
         <div className="flex flex-col gap-8 justify-center items-center">
           <motion.h1
             className="font-bold text-2xl text-center md:text-left md:text-4xl"

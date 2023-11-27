@@ -18,24 +18,18 @@ const data = {
           url: "airbnbClone.png",
           name: "Rent app",
           description:
-            "Rent property web app that allows to sign-in with an account and reserve your favorite property. Also able to search and add your property.",
+            "Rent property web app that allows to sign-in with an account and reserve your favorite property. Also able to search and add your property saved in the database.",
           skillUsed: [
             "next-js.svg",
             "typescript.svg",
             "tailwindcss.svg",
+            "mongodb.svg",
             "prisma.svg",
           ],
           webLink: "https://rent-your-home-five.vercel.app/",
         },
         {
           itemId: 2,
-          url: "airbnbClone.png",
-          name: "react project 2",
-          description: "This is a project 2",
-          skillUsed: [],
-        },
-        {
-          itemId: 3,
           url: "threejs.png",
           name: "3D Landing page",
           description:
@@ -83,6 +77,22 @@ const data = {
         },
         {
           itemId: 2,
+          url: "amazon_clone.png",
+          name: "Amazon Clone",
+          skillUsed: ["react.svg", "Html.svg", "css.svg"],
+          webLink: "https://jlee9503.github.io/amazon-clone/",
+          description: "Amazon UI clone using react.js."
+        },
+        {
+          itemId: 3,
+          url: "ball_destroy.png",
+          name: "Pygame projects",
+          skillUsed: ["python.svg"],
+          webLink: "https://github.com/jlee9503/pygame_projects",
+          description: "2D game created using pygame library.",
+        },
+        {
+          itemId: 4,
           url: "grocery_app.png",
           name: "Grocery List",
           skillUsed: ["Html.svg", "css.svg", "javascript.svg"],
@@ -107,7 +117,7 @@ const Projects = () => {
 
   return (
     <main>
-      <Container className="min-h-[calc(100vh-10rem)] flex flex-col 2xl:flex-row justify-start md:justify-center items-center w-full md:px-28 xl:px-60 gap-5 2xl:gap-0">
+      <Container className="min-h-[calc(100vh-10rem)] flex flex-col 2xl:flex-row justify-start md:justify-center items-center w-full px-10 md:px-28 xl:px-60 gap-5 2xl:gap-0">
         <Arrow href="/experience" direction="left" />
         <motion.div
           className="flex flex-col justify-start gap-6 basis-1/3 w-full 2xl:w-fit"

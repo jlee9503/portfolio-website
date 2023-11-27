@@ -17,10 +17,10 @@ const data = {
 const About = () => {
   return (
     <main>
-      <Container className="min-h-[calc(100vh-10rem)] flex justify-center items-center w-full md:px-32 gap-12">
+      <Container className="min-h-[calc(100vh-10rem)] flex flex-col-reverse justify-center items-center w-full xl:flex-row px-10 md:px-32 gap-12">
         <Arrow href="/" direction="left" />
         <motion.div
-          className="basis-2/3"
+          className="basis-1/2 xl:basis-2/3"
           initial={{ x: -200, opacity: 0 }}
           transition={{ duration: 1 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -30,7 +30,7 @@ const About = () => {
           <p>{data.introduction}</p>
         </motion.div>
         <motion.div
-          className="basis-1/3 flex justify-center items-center w-full relative pt-[30%]"
+          className="basis-1/2 xl:basis-1/3 flex justify-center items-center w-full relative pt-[50%] xl:pt-[30%]"
           initial={{ x: 200, opacity: 0 }}
           transition={{ duration: 1 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -42,7 +42,7 @@ const About = () => {
             objectFit="cover"
             fill
             sizes="100%"
-            className="object-cover rounded-2xl"
+            className="object-contain rounded-2xl"
           />
         </motion.div>
         <Arrow href="/experience" direction="right" />

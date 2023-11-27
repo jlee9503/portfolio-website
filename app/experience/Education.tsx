@@ -28,7 +28,7 @@ const EducationDetails = ({
         whileInView={{ y: 0 }}
         transition={{ duration: 1.5, type: "spring" }}
       >
-        <h3 className="capitalize font-medium text-2xl">{degree}</h3>
+        <h3 className="capitalize font-medium text-lg md:text-2xl">{degree}</h3>
         <span className="capitalize font-medium text-dark/75 dark:text-light/75">
           {timeframe} | {school}
         </span>
@@ -41,7 +41,7 @@ const Education = () => {
 
   return (
     <div className="w-full">
-      <h1 className="font-semibold text-3xl mb-10 w-full">Education</h1>
+      <h1 className="font-semibold text-xl md:text-3xl mb-10 w-full">Education</h1>
       <div className="w-full relative">
         <motion.div
           className="absolute left-0 top-0 w-[4px] h-full bg-indigo-400 dark:bg-orange-400 origin-top"
