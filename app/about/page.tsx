@@ -11,7 +11,7 @@ const data = {
   title_skill: "Skill",
   introduction:
     "Hi, I'm Jungsu. Software Developer - Over 2 years experience in web development. Eager to explore my creativity and new technologies. I enjoy working on both frontend and backend, converting unstructured and complex dataset to nice and clean visual application. I consider myself to be a fast-learner, able to grasp new concepts quickly with excellent capacity to remember new information. Over the past 2 years, I worked in healthcare management company, building web/desktop application, creating visual displays of clinical/patient data and updating database structure.",
-  profilePic: "/images/profile.jpg",
+  profilePic: "profile.png",
 };
 
 const About = () => {
@@ -37,7 +37,7 @@ const About = () => {
           viewport={{ once: true }}
         >
           <Image
-            src={data.profilePic}
+            src={`/images/${data.profilePic}`}
             alt="profile-picture"
             objectFit="cover"
             fill

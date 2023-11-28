@@ -29,7 +29,7 @@ export default function Home() {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
           >
-            <Link href="/jungsu_lee_resume.pdf" className="flex justify-between items-center" target="_blank">
+            <Link href="/jungsu_lee_resume.pdf" className="flex justify-between items-center" target="_blank" download={true}>
               Resume <FaShareSquare className="ml-1" />
             </Link>
           </motion.button>
