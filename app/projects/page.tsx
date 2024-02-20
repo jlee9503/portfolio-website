@@ -37,6 +37,20 @@ const data = {
           skillUsed: ["react.svg", "javascript.svg", "css.svg"],
           webLink: "https://react-threejs-web.vercel.app/",
         },
+        {
+          itemId: 3,
+          url: "ai-image-generator.png",
+          name: "AI Image Generator",
+          description:
+            "Image generating web app using OpenAI API and store generated image in database to share with other users.",
+          skillUsed: [
+            "react.svg",
+            "tailwindcss.svg",
+            "express.svg",
+            "mongodb.svg",
+          ],
+          webLink: "https://ai-image-generator-opal-chi.vercel.app/",
+        },
       ],
     },
     {
@@ -81,7 +95,7 @@ const data = {
           name: "Amazon Clone",
           skillUsed: ["react.svg", "Html.svg", "css.svg"],
           webLink: "https://jlee9503.github.io/amazon-clone/",
-          description: "Amazon UI clone using react.js."
+          description: "Amazon UI clone using react.js.",
         },
         {
           itemId: 3,
